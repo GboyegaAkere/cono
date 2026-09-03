@@ -26,14 +26,14 @@ export default function ClimateRisksSection({
   return (
     <section className="relative bg-white" >
       {/* Full-bleed image with overlay text */}
-      <div className="relative min-h-[480px] lg:min-h-[620px] overflow-hidden">
+      <div className="relative min-h-120 lg:min-h-155 overflow-hidden">
         <img
           src={backgroundImage}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/40" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/25 to-black/40" />
 
         <div className="relative z-10 h-full px-6 lg:px-16 pt-16 lg:pt-24">
           <motion.h2
