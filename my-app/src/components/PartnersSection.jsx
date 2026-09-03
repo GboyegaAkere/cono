@@ -3,23 +3,23 @@ import { FiLinkedin, FiGlobe } from "react-icons/fi";
 
 const partners = [
   {
-    name: "Michael Lone",
-    role: "Managing Partner",
+    name: "Williams Avelina",
+    role: "investor",
     image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
+      "/lady.png",
     linkedin: "#",
     website: "#",
   },
   {
-    name: "Sarah Whitfield",
-    role: "Strategy & Operations",
+    name: "Stephane Bridier ",
+    role: "Finacial Analyst",
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop",
+      "/man.png",
     linkedin: "#",
     website: "#",
   },
   {
-    name: "David Okonkwo",
+    name: "David Lonez",
     role: "Technology Partner",
     image:
       "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop",
