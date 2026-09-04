@@ -135,55 +135,7 @@ function BottomBar() {
     },
   ];
 
-  return (
-    <div className="relative z-30 flex items-center justify-between gap-6 bg-[#0B0A38] px-6 lg:px-10 py-4 flex-wrap">
-      <div className="flex items-center gap-6">
-        {/* Social Icons */}
-        <div className="flex items-center gap-4">
-          {socials.map(({ Icon, label }) => (
-            <a
-              key={label}
-              href="#"
-              aria-label={label}
-              className="text-neutral-300 hover:text-white transition-colors"
-            >
-              <Icon size={16} />
-            </a>
-          ))}
-        </div>
-
-        {/* Divider */}
-        <span className="hidden sm:block w-px h-4 bg-neutral-600" />
-
-        {/* Print */}
-        <a
-          href="#"
-          className="hidden sm:flex items-center gap-2 text-white text-xs font-bold tracking-wide"
-        >
-          PRINT <FiPrinter size={16} />
-        </a>
-
-        {/* Divider */}
-        <span className="hidden lg:block w-px h-4 bg-neutral-600" />
-
-        {/* Sustainability Report Builder */}
-        <a
-          href="#"
-          className="hidden lg:flex items-center gap-2 text-white text-xs font-bold tracking-wide"
-        >
-          SUSTAINABILITY REPORT BUILDER <FiSettings size={16} />
-        </a>
-      </div>
-
-      {/* Back to Top */}
-      <a
-        href="#top"
-        className="flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white text-xs font-bold tracking-wide px-5 py-3 transition-colors"
-      >
-        BACK TO TOP <FiArrowUp size={14} />
-      </a>
-    </div>
-  );
+  
 }
 
 /* =========================
