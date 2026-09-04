@@ -4,7 +4,7 @@ import { FiLinkedin, FiGlobe } from "react-icons/fi";
 const partners = [
   {
     name: "Williams Avelina",
-    role: "Investor",
+    role: "Financial Analyst",
     image:
       "/lady.png",
     linkedin: "#",
@@ -12,7 +12,7 @@ const partners = [
   },
   {
     name: "Stephane Bridier ",
-    role: "Finacial Analyst",
+    role: "Co-Investor",
     image:
       "/man.png",
     linkedin: "#",
