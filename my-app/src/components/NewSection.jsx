@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const newsItems = {
   feature: {
     image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop",
+      "/worker.jpg",
     tagColor: "bg-blue-700",
     tag: "SPIRITNOW",
     category: "FEATURE STORIES",
@@ -27,7 +27,7 @@ const newsItems = {
       "ConocoPhillips announces second-quarter 2026 results and quarterly dividend",
     date: "AUGUST 6, 2026",
     image:
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop",
+      "/teacher.jpg",
   },
 };
 
@@ -47,7 +47,7 @@ function FeatureCard() {
       className="flex flex-col"
     >
       {/* Image */}
-      <div className="w-full aspect-[4/3] overflow-hidden">
+      <div className="w-full aspect-4/3 overflow-hidden">
         <img
           src={item.image}
           alt={item.title}
@@ -174,7 +174,7 @@ function SecondaryCard() {
       </div>
 
       {/* Image */}
-      <div className="w-full aspect-[16/10] overflow-hidden">
+      <div className="w-full aspect-16/10 overflow-hidden">
         <img
           src={item.image}
           alt="Aerial view of landscape"

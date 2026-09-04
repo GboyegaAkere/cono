@@ -21,7 +21,7 @@ function BottomBar() {
 export default function ClimateRisksSection({
   title = "Managing climate-related risks",
   subtitle = "We have adopted a comprehensive framework with an ambition to become a net-zero company for operational emissions by 2050.",
-  backgroundImage = "https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=1600&auto=format&fit=crop",
+  backgroundImage = "/climate.jpg",
 }) {
   return (
     <section className="relative bg-white" >

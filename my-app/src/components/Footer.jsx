@@ -43,12 +43,18 @@ const contactItems = [
     href: "#",
     underline: true,
   },
-  {
-    Icon: FiPhone,
-    text: "281-293-1000",
-    href: "tel:2812931000",
-    underline: true,
+   {
+    Icon: FiMail,
+    text: "conocophillips.com",
+    href: null,
+    underline: false,
   },
+  // {
+  //   Icon: FiPhone,
+  //   text: "281-293-1000",
+  //   href: "tel:2812931000",
+  //   underline: true,
+  // },
 ];
 
 const quickLinks = [

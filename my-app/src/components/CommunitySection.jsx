@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 const cards = [
   {
     image:
-      "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?q=80&w=1200&auto=format&fit=crop",
+      "/nom.jpg",
     title: "Nominate a teacher for 2027 Math Teacher of the Month",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
+      "/com.jpg",
     title: "Collaborating to benefit communities",
   },
 ];
@@ -42,7 +42,7 @@ export default function CommunitySection({
   eyebrow,
   title = "Invested in communities",
   subtitle = "To be a good corporate citizen, we must first be good neighbors.",
-  backgroundImage = "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop",
+  backgroundImage = "/bg.jpg",
   items = cards,
 }) {
   return (
