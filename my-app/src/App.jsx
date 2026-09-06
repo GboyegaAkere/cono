@@ -1,30 +1,28 @@
-import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import NewsSection from "./components/NewSection";
-import ReportsSection from "./components/ReportsSection";
-import CommunitySection from "./components/CommunitySection";
-import ClimateRisksSection from "./components/ClimateRisksSection";
-import PowerInCooperationSection from "./components/PowerInCooperationSection";
-import WorldwideOperationsSection from "./components/WorldwideOperationsSection";
-import PartnersSection from "./components/PartnersSection";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import AboutUs from "./pages/AboutUs";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <Hero/>
-      <PartnersSection/>
-      <NewsSection/>
-      <ReportsSection/>
-      
-      <ClimateRisksSection/>
-      <PowerInCooperationSection/>
-      <CommunitySection/>
-      <WorldwideOperationsSection/>
-      <Footer />
-    </div>
+    <>
+      <Navbar/>
+      <Routes>
+       <Route path="/" element={<Home/>} />
+       <Route path= "/about-us" element ={<AboutUs/>}/>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer/>
+    </>
   );
 }
 
-export default App;
+function NotFound() {
+  return (
+    <div className="px-6 py-20 text-center">
+      <h1 className="text-3xl font-bold">Page not found</h1>
+    </div>
+  );
+}
