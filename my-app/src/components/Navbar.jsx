@@ -17,12 +17,12 @@ import {
 } from "react-icons/fa6";
 
 const topLinks = [
-  { label: "Where we operate", to: "/where-we-operate" },
-  { label: "Reports & resources", to: "/reports-resources" },
-  { label: "News & media", to: "/news-media" },
-  { label: "spiritnow stories", to: "/spiritnow-stories" },
-  { label: "U.S. Owner Relations", to: "/us-owner-relations" },
-  { label: "Supplier Relations", to: "/supplier-relations" },
+  { label: "Where we operate", },
+  { label: "Reports & resources",},
+  { label: "News & media",  },
+  { label: "spiritnow stories", },
+  { label: "U.S. Owner Relations", },
+  { label: "Supplier Relations", },
 ];
 
 const mainLinks = [
@@ -31,7 +31,7 @@ const mainLinks = [
     to: "/about-us",
     hasDropdown: true,
     dropdown: [
-      { label: "Who we are", to: "/about-us/who-we-are" },
+      { label: "Who we are", to: "/about-us" },
        { label: "Our People", to: "/about-us/our-people" },
       // { label: "Our leadership", to: "/about-us/leadership" },
       // { label: "Our history", to: "/about-us/history" },
@@ -43,8 +43,8 @@ const mainLinks = [
     to: "/what-we-do",
     hasDropdown: true,
     dropdown: [
-      { label: "Our operations", to: "/what-we-do/operations" },
-      // { label: "Exploration", to: "/what-we-do/exploration" },
+     
+      { label: "Exploration", to: "/what-we-do/exploration" },
       // { label: "Production", to: "/what-we-do/production" },
       // { label: "Technology", to: "/what-we-do/technology" },
     ],
@@ -54,8 +54,8 @@ const mainLinks = [
     to: "/sustainability",
     hasDropdown: true,
     dropdown: [
-      { label: "Our approach", to: "/sustainability/approach" },
-      { label: "Climate change", to: "/sustainability/climate-change" },
+       { label: "Our operations", to: "/what-we-do/operations" },
+      { label: "Climate change", to: "/sustainability/managing" },
       // { label: "Environment", to: "/sustainability/environment" },
       // {
       //   label: "Social responsibility",
@@ -65,17 +65,17 @@ const mainLinks = [
   },
   {
     label: "Careers",
-    to: "/careers",
+    to: "/sustainability/managing",
     hasDropdown: false,
   },
   {
     label: "Investors",
-    to: "/investors",
+    to: "/about-us",
     hasDropdown: true,
     dropdown: [
       {
         label: "Investor relations",
-        to: "/investors/relations",
+        to: "/about-us",
       },
       {
       //   label: "Financial information",
@@ -162,7 +162,7 @@ function TopBar({ scrolled }) {
         duration: 0.3,
         ease: "easeInOut",
       }}
-      className="hidden lg:flex overflow-hidden items-center justify-end gap-7 px-10 bg-gradient-to-b from-neutral-200 to-neutral-300 border-b border-neutral-300"
+      className="hidden lg:flex overflow-hidden items-center justify-end gap-7 px-10 bg-linear-to-b from-neutral-200 to-neutral-300 border-b border-neutral-300"
     >
       {topLinks.map((link) => (
         <motion.div
@@ -440,7 +440,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] w-full font-sans">
+    <header className="fixed top-0 left-0 right-0 z-100 w-full font-sans">
       <TopBar scrolled={scrolled} />
 
       <motion.div

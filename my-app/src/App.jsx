@@ -5,6 +5,10 @@ import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs";
 import Who from "./pages/Who";
 import OurPeoplePage from "./pages/OurPeoplePage";
+import Exploration from "./pages/Exploration";
+import Operations from "./pages/Operations";
+import Managing from "./pages/Managing";
+
 
 
 export default function App() {
@@ -16,8 +20,10 @@ export default function App() {
        <Route path= "/about-us" element ={<AboutUs/>}/>
        <Route path= "/about-us/who-we-are" element ={<Who/>}/>
        <Route path= "/about-us/our-people" element ={<OurPeoplePage/>}/>
-
-        <Route path="*" element={<NotFound />} />
+       <Route path= "/what-we-do/exploration" element ={<Exploration/>}/>
+       <Route path= "/what-we-do/operations" element ={<Operations/>}/>
+       <Route path= "/sustainability/managing" element ={<Managing/>}/>
+        <Route path="/managing" element={<NotFound />} />
       </Routes>
       <Footer/>
     </>

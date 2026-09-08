@@ -53,7 +53,7 @@ function PageHero() {
     <div className="relative">
       <div className="relative h-105 lg:h-120 overflow-hidden">
         <motion.img
-          src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=1600&auto=format&fit=crop"
+          src="/com.jpg"
           alt="Aerial view of drilling site"
           animate={
             playing
