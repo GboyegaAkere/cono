@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs";
+import Who from "./pages/Who";
+import OurPeoplePage from "./pages/OurPeoplePage";
 
 
 export default function App() {
@@ -12,6 +14,9 @@ export default function App() {
       <Routes>
        <Route path="/" element={<Home/>} />
        <Route path= "/about-us" element ={<AboutUs/>}/>
+       <Route path= "/about-us/who-we-are" element ={<Who/>}/>
+       <Route path= "/about-us/our-people" element ={<OurPeoplePage/>}/>
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>

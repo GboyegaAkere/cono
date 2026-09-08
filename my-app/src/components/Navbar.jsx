@@ -32,9 +32,10 @@ const mainLinks = [
     hasDropdown: true,
     dropdown: [
       { label: "Who we are", to: "/about-us/who-we-are" },
-      { label: "Our leadership", to: "/about-us/leadership" },
-      { label: "Our history", to: "/about-us/history" },
-      { label: "Our values", to: "/about-us/values" },
+       { label: "Our People", to: "/about-us/our-people" },
+      // { label: "Our leadership", to: "/about-us/leadership" },
+      // { label: "Our history", to: "/about-us/history" },
+      // { label: "Our values", to: "/about-us/values" },
     ],
   },
   {
@@ -43,9 +44,9 @@ const mainLinks = [
     hasDropdown: true,
     dropdown: [
       { label: "Our operations", to: "/what-we-do/operations" },
-      { label: "Exploration", to: "/what-we-do/exploration" },
-      { label: "Production", to: "/what-we-do/production" },
-      { label: "Technology", to: "/what-we-do/technology" },
+      // { label: "Exploration", to: "/what-we-do/exploration" },
+      // { label: "Production", to: "/what-we-do/production" },
+      // { label: "Technology", to: "/what-we-do/technology" },
     ],
   },
   {
@@ -55,11 +56,11 @@ const mainLinks = [
     dropdown: [
       { label: "Our approach", to: "/sustainability/approach" },
       { label: "Climate change", to: "/sustainability/climate-change" },
-      { label: "Environment", to: "/sustainability/environment" },
-      {
-        label: "Social responsibility",
-        to: "/sustainability/social-responsibility",
-      },
+      // { label: "Environment", to: "/sustainability/environment" },
+      // {
+      //   label: "Social responsibility",
+      //   to: "/sustainability/social-responsibility",
+      // },
     ],
   },
   {
@@ -77,20 +78,20 @@ const mainLinks = [
         to: "/investors/relations",
       },
       {
-        label: "Financial information",
-        to: "/investors/financial-information",
-      },
-      {
-        label: "Stock information",
-        to: "/investors/stock-information",
-      },
-      {
-        label: "SEC filings",
-        to: "/investors/sec-filings",
-      },
-      {
-        label: "Events & presentations",
-        to: "/investors/events-presentations",
+      //   label: "Financial information",
+      //   to: "/investors/financial-information",
+      // },
+      // {
+      //   label: "Stock information",
+      //   to: "/investors/stock-information",
+      // },
+      // {
+      //   label: "SEC filings",
+      //   to: "/investors/sec-filings",
+      // },
+      // {
+      //   label: "Events & presentations",
+      //   to: "/investors/events-presentations",
       },
     ],
   },
