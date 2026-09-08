@@ -70,12 +70,12 @@ const mainLinks = [
   },
   {
     label: "Investors",
-    to: "/about-us",
+    to: "/about-us/who-we-are",
     hasDropdown: true,
     dropdown: [
       {
         label: "Investor relations",
-        to: "/about-us",
+        to: "/about-us/who-we-are",
       },
       {
       //   label: "Financial information",
