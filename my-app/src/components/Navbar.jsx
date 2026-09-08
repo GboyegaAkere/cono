@@ -16,14 +16,41 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
+/* =========================
+   TOP LINKS
+   Desktop only
+========================= */
+
 const topLinks = [
-  { label: "Where we operate", },
-  { label: "Reports & resources",},
-  { label: "News & media",  },
-  { label: "spiritnow stories", },
-  { label: "U.S. Owner Relations", },
-  { label: "Supplier Relations", },
+  {
+    label: "Where we operate",
+    to: "/where-we-operate",
+  },
+  {
+    label: "Reports & resources",
+    to: "/reports-resources",
+  },
+  {
+    label: "News & media",
+    to: "/news-media",
+  },
+  {
+    label: "spiritnow stories",
+    to: "/spiritnow-stories",
+  },
+  {
+    label: "U.S. Owner Relations",
+    to: "/us-owner-relations",
+  },
+  {
+    label: "Supplier Relations",
+    to: "/supplier-relations",
+  },
 ];
+
+/* =========================
+   MAIN LINKS
+========================= */
 
 const mainLinks = [
   {
@@ -31,53 +58,89 @@ const mainLinks = [
     to: "/about-us",
     hasDropdown: true,
     dropdown: [
-      { label: "Who we are", to: "/about-us" },
-       { label: "Our People", to: "/about-us/our-people" },
-      // { label: "Our leadership", to: "/about-us/leadership" },
-      // { label: "Our history", to: "/about-us/history" },
-      // { label: "Our values", to: "/about-us/values" },
+      {
+        label: "Who we are",
+        to: "/about-us",
+      },
+      {
+        label: "Our People",
+        to: "/about-us/our-people",
+      },
+      // {
+      //   label: "Our leadership",
+      //   to: "/about-us/leadership",
+      // },
+      // {
+      //   label: "Our history",
+      //   to: "/about-us/history",
+      // },
+      // {
+      //   label: "Our values",
+      //   to: "/about-us/values",
+      // },
     ],
   },
+
   {
     label: "What we do",
     to: "/what-we-do",
     hasDropdown: true,
     dropdown: [
-     
-      { label: "Exploration", to: "/what-we-do/exploration" },
-      // { label: "Production", to: "/what-we-do/production" },
-      // { label: "Technology", to: "/what-we-do/technology" },
+      {
+        label: "Exploration",
+        to: "/what-we-do/exploration",
+      },
+      // {
+      //   label: "Production",
+      //   to: "/what-we-do/production",
+      // },
+      // {
+      //   label: "Technology",
+      //   to: "/what-we-do/technology",
+      // },
     ],
   },
+
   {
     label: "Sustainability",
     to: "/sustainability",
     hasDropdown: true,
     dropdown: [
-       { label: "Our operations", to: "/what-we-do/operations" },
-      { label: "Climate change", to: "/sustainability/managing" },
-      // { label: "Environment", to: "/sustainability/environment" },
+      {
+        label: "Our operations",
+        to: "/what-we-do/operations",
+      },
+      {
+        label: "Climate change",
+        to: "/sustainability/managing",
+      },
+      // {
+      //   label: "Environment",
+      //   to: "/sustainability/environment",
+      // },
       // {
       //   label: "Social responsibility",
       //   to: "/sustainability/social-responsibility",
       // },
     ],
   },
+
   {
     label: "Careers",
-    to: "/sustainability/managing",
+    to: "/careers",
     hasDropdown: false,
   },
+
   {
     label: "Investors",
-    to: "/about-us",
+    to: "/investors",
     hasDropdown: true,
     dropdown: [
       {
         label: "Investor relations",
-        to: "/about-us",
+        to: "/investors",
       },
-      {
+      // {
       //   label: "Financial information",
       //   to: "/investors/financial-information",
       // },
@@ -92,10 +155,14 @@ const mainLinks = [
       // {
       //   label: "Events & presentations",
       //   to: "/investors/events-presentations",
-      },
+      // },
     ],
   },
 ];
+
+/* =========================
+   SOCIAL ICONS
+========================= */
 
 const socialIcons = [
   {
@@ -132,7 +199,11 @@ const socialIcons = [
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-1.5">
-      <svg viewBox="0 0 60 40" className="w-9 h-6 lg:w-11 lg:h-7">
+      <svg
+        viewBox="0 0 60 40"
+        className="w-9 h-6 lg:w-11 lg:h-7"
+        aria-hidden="true"
+      >
         <path
           d="M2 8 C 20 2, 35 2, 58 10 C 40 22, 22 22, 2 8 Z"
           fill="#D0021B"
@@ -148,6 +219,7 @@ function Logo() {
 
 /* =========================
    TOP BAR
+   DESKTOP ONLY
 ========================= */
 
 function TopBar({ scrolled }) {
@@ -162,7 +234,7 @@ function TopBar({ scrolled }) {
         duration: 0.3,
         ease: "easeInOut",
       }}
-      className="hidden lg:flex overflow-hidden items-center justify-end gap-7 px-10 bg-linear-to-b from-neutral-200 to-neutral-300 border-b border-neutral-300"
+      className="hidden lg:flex overflow-hidden items-center justify-end gap-7 px-10 bg-gradient-to-b from-neutral-200 to-neutral-300 border-b border-neutral-300"
     >
       {topLinks.map((link) => (
         <motion.div
@@ -245,10 +317,13 @@ function NavItem({
 
 /* =========================
    MOBILE NAV ITEM
+   MAIN LINKS ONLY
 ========================= */
 
 function MobileNavItem({ item, onClose }) {
   const [open, setOpen] = useState(false);
+
+  /* Careers has no dropdown */
 
   if (!item.hasDropdown) {
     return (
@@ -298,7 +373,9 @@ function MobileNavItem({ item, onClose }) {
               height: 0,
               opacity: 0,
             }}
-            transition={{ duration: 0.2 }}
+            transition={{
+              duration: 0.2,
+            }}
             className="overflow-hidden bg-red-700"
           >
             {item.dropdown.map((subItem) => (
@@ -346,6 +423,7 @@ function MobileMenu({ open, onClose }) {
           className="overflow-hidden bg-white lg:hidden"
         >
           {/* Search */}
+
           <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200">
             <input
               type="text"
@@ -359,7 +437,8 @@ function MobileMenu({ open, onClose }) {
             />
           </div>
 
-          {/* Main links */}
+          {/* Main Navigation */}
+
           <div>
             {mainLinks.map((item) => (
               <MobileNavItem
@@ -370,22 +449,22 @@ function MobileMenu({ open, onClose }) {
             ))}
           </div>
 
-          {/* Secondary links */}
-          <div className="px-6 py-5 flex flex-col gap-4">
-            {topLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.to}
-                className="text-[15px] text-neutral-800 hover:text-red-600 transition-colors"
-                onClick={onClose}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          {/* 
+            IMPORTANT:
+            The desktop secondary links such as:
+            - Where we operate
+            - Reports & resources
+            - News & media
+            - spiritnow stories
+            - U.S. Owner Relations
+            - Supplier Relations
 
-          {/* Choose location */}
-          <div className="px-6 pb-6">
+            are intentionally NOT displayed in the mobile menu.
+          */}
+
+          {/* Choose Location */}
+
+          <div className="px-6 py-6">
             <Link
               to="/choose-location"
               onClick={onClose}
@@ -396,7 +475,8 @@ function MobileMenu({ open, onClose }) {
             </Link>
           </div>
 
-          {/* Social icons */}
+          {/* Social Icons */}
+
           <div className="flex items-center justify-center gap-8 pb-8">
             {socialIcons.map(
               ({ Icon, label, href }) => (
@@ -440,8 +520,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-100 w-full font-sans">
+    <header className="fixed top-0 left-0 right-0 z-[100] w-full font-sans">
+      {/* Desktop Top Bar */}
+
       <TopBar scrolled={scrolled} />
+
+      {/* Main Navbar */}
 
       <motion.div
         initial={false}
@@ -454,9 +538,12 @@ export default function Navbar() {
           scrolled ? "shadow-md" : ""
         }`}
       >
+        {/* Logo */}
+
         <Logo />
 
         {/* Desktop Navigation */}
+
         <nav className="hidden lg:flex items-center gap-8">
           {mainLinks.map((item) => (
             <NavItem
@@ -467,7 +554,10 @@ export default function Navbar() {
         </nav>
 
         {/* Right Side */}
+
         <div className="flex items-center gap-4 lg:gap-6">
+          {/* Choose Location */}
+
           <Link
             to="/choose-location"
             className="hidden sm:flex items-center gap-1.5 text-sm text-neutral-900 hover:text-red-600 transition-colors"
@@ -476,6 +566,8 @@ export default function Navbar() {
             Choose location
           </Link>
 
+          {/* Desktop Search */}
+
           <button
             type="button"
             aria-label="Search"
@@ -483,6 +575,8 @@ export default function Navbar() {
           >
             <FiSearch size={19} />
           </button>
+
+          {/* Mobile Menu Button */}
 
           <button
             type="button"
@@ -504,6 +598,8 @@ export default function Navbar() {
           </button>
         </div>
       </motion.div>
+
+      {/* Mobile Menu */}
 
       <MobileMenu
         open={mobileOpen}
