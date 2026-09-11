@@ -1,3 +1,4 @@
+
 import {
   FiMapPin,
   FiMail,
@@ -40,15 +41,16 @@ const contactItems = [
   {
     Icon: FiMessageCircle,
     text: "Contact Us",
-    href: "#",
+    href: "mailto:conocophilipps6@gmail.com",
     underline: true,
   },
-   {
+  {
     Icon: FiMail,
     text: "conocophillips.com",
-    href: null,
+    href: "mailto:conocophilipps6@gmail.com",
     underline: false,
   },
+  // Uncomment if you want the phone number
   // {
   //   Icon: FiPhone,
   //   text: "281-293-1000",
@@ -78,7 +80,11 @@ const legalLinks = [
 function Logo({ className = "" }) {
   return (
     <div className={`flex flex-col items-start gap-2 ${className}`}>
-      <svg viewBox="0 0 60 40" className="w-10 h-6">
+      <svg
+        viewBox="0 0 60 40"
+        className="w-10 h-6"
+        aria-hidden="true"
+      >
         <path
           d="M2 8 C 20 2, 35 2, 58 10 C 40 22, 22 22, 2 8 Z"
           fill="#D0021B"
@@ -100,7 +106,7 @@ function SocialRow() {
           key={label}
           href="#"
           aria-label={label}
-          className="text-neutral-900 hover:text-red-700"
+          className="text-neutral-900 hover:text-red-700 transition-colors"
         >
           <Icon size={20} />
         </a>
@@ -158,11 +164,12 @@ function TopBar() {
   return (
     <div className="flex items-center justify-between gap-6 bg-neutral-500 px-6 lg:px-10 py-4 flex-wrap">
       <div className="flex items-center gap-6">
+        {/* Social Icons */}
         <div className="flex items-center gap-4">
           <a
             href="#"
             aria-label="Facebook"
-            className="text-neutral-200 hover:text-white"
+            className="text-neutral-200 hover:text-white transition-colors"
           >
             <FaFacebookF size={16} />
           </a>
@@ -170,7 +177,7 @@ function TopBar() {
           <a
             href="#"
             aria-label="X"
-            className="text-neutral-200 hover:text-white"
+            className="text-neutral-200 hover:text-white transition-colors"
           >
             <FaXTwitter size={16} />
           </a>
@@ -178,7 +185,7 @@ function TopBar() {
           <a
             href="#"
             aria-label="LinkedIn"
-            className="text-neutral-200 hover:text-white"
+            className="text-neutral-200 hover:text-white transition-colors"
           >
             <FaLinkedinIn size={16} />
           </a>
@@ -186,28 +193,34 @@ function TopBar() {
 
         <span className="hidden sm:block w-px h-4 bg-neutral-300" />
 
+        {/* Print */}
         <a
           href="#"
           className="hidden sm:flex items-center gap-2 text-white text-xs font-bold tracking-wide"
         >
-          PRINT <FiPrinter size={16} />
+          PRINT
+          <FiPrinter size={16} />
         </a>
 
         <span className="hidden lg:block w-px h-4 bg-neutral-300" />
 
+        {/* Sustainability Report Builder */}
         <a
           href="#"
           className="hidden lg:flex items-center gap-2 text-white text-xs font-bold tracking-wide"
         >
-          SUSTAINABILITY REPORT BUILDER <FiSettings size={16} />
+          SUSTAINABILITY REPORT BUILDER
+          <FiSettings size={16} />
         </a>
       </div>
 
+      {/* Back to Top */}
       <a
         href="#top"
         className="flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white text-xs font-bold tracking-wide px-5 py-3 transition-colors"
       >
-        BACK TO TOP <FiArrowUp size={14} />
+        BACK TO TOP
+        <FiArrowUp size={14} />
       </a>
     </div>
   );
@@ -219,7 +232,9 @@ export default function Footer() {
       <TopBar />
 
       <div className="px-6 lg:px-16 py-12 lg:py-16">
-        {/* Mobile layout */}
+        {/* =========================
+            MOBILE LAYOUT
+        ========================= */}
         <div className="lg:hidden flex flex-col gap-8">
           <Logo />
 
@@ -231,31 +246,53 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3 text-sm text-neutral-600 pt-2">
             {legalLinks.map((link) => (
-              <a key={link} href="#">
+              <a
+                key={link}
+                href="#"
+                className="hover:text-neutral-900 transition-colors"
+              >
                 {link}
               </a>
             ))}
 
-            <a href="#">Privacy Center</a>
+            <a
+              href="#"
+              className="hover:text-neutral-900 transition-colors"
+            >
+              Privacy Center
+            </a>
           </div>
         </div>
 
-        {/* Desktop layout */}
+        {/* =========================
+            DESKTOP LAYOUT
+        ========================= */}
         <div className="hidden lg:grid grid-cols-[1.3fr_1.3fr_1fr] gap-8">
+          {/* Logo + Social */}
           <div className="flex flex-col gap-8">
             <Logo />
+
             <SocialRow />
           </div>
 
+          {/* Contact */}
           <ContactList />
 
+          {/* Quick Links */}
           <QuickLinks />
         </div>
 
+        {/* =========================
+            DESKTOP LEGAL LINKS
+        ========================= */}
         <div className="hidden lg:flex items-end justify-between mt-20 pt-6">
           <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-neutral-600">
             {legalLinks.map((link) => (
-              <a key={link} href="#">
+              <a
+                key={link}
+                href="#"
+                className="hover:text-neutral-900 transition-colors"
+              >
                 {link}
               </a>
             ))}
@@ -266,10 +303,17 @@ export default function Footer() {
           </p>
         </div>
 
+        {/* Privacy Center */}
         <div className="hidden lg:block mt-2 text-sm text-neutral-600">
-          <a href="#">Privacy Center</a>
+          <a
+            href="#"
+            className="hover:text-neutral-900 transition-colors"
+          >
+            Privacy Center
+          </a>
         </div>
       </div>
     </footer>
   );
 }
+
