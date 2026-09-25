@@ -19,10 +19,10 @@ const partners = [
     website: "#",
   },
   {
-    name: "David Lonez",
-    role: "Technology Partner",
+    name: "Mathew Dave",
+    role: "Field Engineer",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop",
+      "/su.png",
     linkedin: "#",
     website: "#",
   },
